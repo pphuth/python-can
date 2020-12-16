@@ -19,6 +19,7 @@ from .blf import BLFReader
 from .canutils import CanutilsLogReader
 from .csv import CSVReader
 from .sqlite import SqliteReader
+from .pcap import PcapLogReader
 
 
 class LogReader(BaseIOHandler):
@@ -31,6 +32,7 @@ class LogReader(BaseIOHandler):
       * .csv
       * .db
       * .log
+      * .pcap
 
     Exposes a simple iterator interface, to use simply:
 
@@ -53,6 +55,7 @@ class LogReader(BaseIOHandler):
         ".csv": CSVReader,
         ".db": SqliteReader,
         ".log": CanutilsLogReader,
+        ".pcap": PcapLogReader,
     }
 
     @staticmethod
